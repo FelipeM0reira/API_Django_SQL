@@ -11,7 +11,7 @@ movie = input('Digite o nome do filme: ')
 
 def get_movie():
     response = get(BASE_URL+MOVIE_URL+apiKey+movie).json()
-    return response
+    return response['results']
 
 
 print(get_movie())
